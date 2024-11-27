@@ -12,7 +12,7 @@ importers:
         specifier: ^5.61.4
         version: 5.61.4(react@18.3.1)
       viem:
-        specifier: 2.x
+        specifier: ~2.21.51
         version: 2.21.51(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10)(zod@3.23.8)
       wagmi:
         specifier: ^2.13.0
