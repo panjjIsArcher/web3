@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tanstack/react-query": "^5.61.4",
+    "viem": "2.x",
+    "wagmi": "^2.13.0",
     "web3": "^4.15.0"
   },
   "devDependencies": {
