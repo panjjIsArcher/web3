@@ -16,7 +16,7 @@ contract Vote {
         require(block.timestamp < endTime, "expired"); // 日期校验
         require(!voted[msg.sender], "voted"); // 防止重复
         voted[msg.sender] = true; // 该用户已提交
-        string memory value = ticket.getTicket(_ticketKey); // 获取票
+        uint256 value = ticket.getTicket(_ticketKey); // 获取票
         ticket.setTicket(_ticketKey, value + 1);
     }
 }
