@@ -18,7 +18,7 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0(@tanstack/query-core@5.61.4)(@tanstack/react-query@5.61.4(react@18.3.1))(bufferutil@4.0.8)(immer@10.0.2)(react-native@0.76.3(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.7.2)(utf-8-validate@5.0.10)(viem@2.21.51(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10)(zod@3.23.8))(zod@3.23.8)
       web3:
-        specifier: ^4.15.0
+        specifier: ~4.15.0
         version: 4.15.0(bufferutil@4.0.8)(typescript@5.7.2)(utf-8-validate@5.0.10)(zod@3.23.8)
     devDependencies:
       '@nomicfoundation/hardhat-chai-matchers':
@@ -64,7 +64,7 @@ importers:
         specifier: ^1.0.8
         version: 1.0.10(bufferutil@4.0.8)(hardhat@2.22.16(bufferutil@4.0.8)(ts-node@10.9.2(@types/node@22.10.0)(typescript@5.7.2))(typescript@5.7.2)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)
       solidity-coverage:
-        specifier: ^0.8.0
+        specifier: ~0.8.0
         version: 0.8.14(hardhat@2.22.16(bufferutil@4.0.8)(ts-node@10.9.2(@types/node@22.10.0)(typescript@5.7.2))(typescript@5.7.2)(utf-8-validate@5.0.10))
       typechain:
         specifier: ^8.3.0
