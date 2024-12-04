@@ -12,11 +12,19 @@ contract Vote {
     }
 
     // vote count
-    function vote(string memory _ticketKey) public {
-        require(block.timestamp < endTime, "expired"); // 日期校验
-        require(!voted[msg.sender], "voted"); // 防止重复
+    function vote(string memory _ticketKey) public expired(endTime) isVoted {
         voted[msg.sender] = true; // 该用户已提交
-        uint256 value = ticket.getTicket(_ticketKey); // 获取票
-        ticket.setTicket(_ticketKey, value + 1);
+        uint256 value = ticket.getTicket(_ticketKey); // 获取
+        ticket.setTicket(_ticketKey, value + 1); // 更新
+    }
+
+    modifier expired(uint256 _endTime) {
+        require(block.timestamp < _endTime, "expired"); // 日期校验
+        _;
+    }
+
+    modifier isVoted() {
+        require(!voted[msg.sender], "voted"); // 防止重复
+        _;
     }
 }
