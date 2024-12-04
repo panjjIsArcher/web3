@@ -14,7 +14,7 @@
     "@tanstack/react-query": "^5.61.4",
     "viem": "~2.21.51",
     "wagmi": "^2.13.0",
-    "web3": "^4.15.0"
+    "web3": "~4.15.0"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
@@ -31,7 +31,7 @@
     "ethers": "^6.4.0",
     "hardhat": "^2.22.16",
     "hardhat-gas-reporter": "^1.0.8",
-    "solidity-coverage": "^0.8.0",
+    "solidity-coverage": "~0.8.0",
     "typechain": "^8.3.0"
   }
 }
