@@ -8,8 +8,7 @@ contract Vote {
     uint256 public endTime; // 结束时间
     mapping(address => bool) public voted;
 
-    constructor(uint256 _endTime) {
-        endTime = _endTime;
+    constructor() {
         ticket = new Ticket();
     }
 
