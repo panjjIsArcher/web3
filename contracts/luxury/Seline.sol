@@ -2,11 +2,12 @@
 pragma solidity ^0.8.27;
 
 contract Seline {
+    bool private paused; // 是否暂停
     string public name;
     string public symbol; // 代币符号或者缩写
     uint8 public decimals; // 代币允许分割的小数位数
     uint256 public totalSupply; // 代币总供应量
-    bool private paused; // 是否暂停
+
     mapping(address => uint256) public balances; // 记录每个地址的余额
     mapping(address => mapping(address => uint256)) public allowance; // 允许 spender 在 owner 设定的额度内使用 owner 的代币，而无需 owner 直接操作每一笔交易
 
@@ -59,6 +60,7 @@ contract Seline {
         balances[_to] += _value;
         allowance[_from][msg.sender] -= _value; // 减少发送者允许的代币数量
         emit Transfer(_from, _to, _value);
+        gasleft(); // 获取剩余gas
         return true;
     }
 
